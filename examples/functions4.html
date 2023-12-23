@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+Very simple demonstration of a function call, but using a <span> element 
+styled so that the user can see the cursor change when they mouse over.
+
+Sam Scott, May 2013
+-->
+<html>
+    <head>
+        <title>Onclick</title>
+        <script>
+            /**
+             * Sets the size of #heading to 12 px.
+             * @returns {undefined}
+             */
+            function changeSize() {
+                document.getElementById("heading").style.fontSize = "12px";
+            }
+        </script>
+        <style>
+            .clickable {
+                cursor: pointer;
+                color: darkred;
+            }
+            .clickable:hover {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="heading">You can <span class="clickable" onclick="changeSize();">click here</span> if you want.</h1>
+        <p id='message'></p>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+This is an exercise. Add javascript and make other modifications necessary so
+that menu 1 pops up and is hidden in response to mouseover and mouseout.
+
+Sam Scott, February 2012
+-->
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+            div {
+                position:absolute;
+                left:20px;
+                padding:20px;
+                background-color:lightblue;
+                border:solid midnightblue 2px
+            }
+
+            #header {
+                top:10px;
+                width:700px;
+                height:60px;
+            }
+
+            #sideBar {
+                top:120px;
+                width:80px;
+                height:500px;
+            }
+
+            #content {
+                top:120px;
+                left:150px;
+                width:570px;
+                height:500px;
+            }
+
+            p {
+                padding:5px;
+                margin:0px;
+                text-align:center;
+            }
+
+            #menu1 {
+                background-color:gray;
+                color:white;
+            }
+
+            #bigMenu1 {
+                background-color:gray;
+                border:0px;
+                color:white;
+                padding:5px;
+                left:120px;
+                top:142px;
+                width:80px;
+                height:160px;
+            }
+
+            a {
+                color:white;
+                text-decoration:none;
+            }
+
+            h1 {
+                padding:0px;
+                margin:0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <h1>SideBar Menu Exercise</h1>
+        </div>
+
+        <div id="sideBar" >
+            <p id="menu1">Menu 1</p>
+            <p id="menu2">Menu 2</p>
+            <p id="menu3">Menu 3</p>
+        </div>
+
+        <div id="content">
+            TODO: Add Content Here
+        </div>
+
+        <div id="bigMenu1">
+            <a href="http://www.google.ca" target="a">search</a><hr/>
+            <a href="http://www.twitter.com" target="b">tweet</a><hr/>
+            <a href="http://www.cbc.ca/tv" target="c">tv</a><hr/>
+            <a href="http://www.cbc.ca/radio" target="d">radio</a><hr/>
+        </div>
+    </body>
+</html>

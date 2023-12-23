@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+A quick demo of web and session storage. Note the use of the onload event on
+the body to make the function count() run one time, after the <body> element
+has finished loading.
+
+Sam Scott, May 2012
+-->
+<html>
+    <head>
+        <title>webStorageDemo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            function count() {
+                if (localStorage["counter"])
+                    localStorage["counter"] = parseInt(localStorage["counter"])+1;
+                else
+                    localStorage["counter"] = 1;
+                document.getElementById("numVisits").innerHTML = localStorage["counter"];
+                
+                if (sessionStorage["counter"])
+                    sessionStorage["counter"] = parseInt(sessionStorage["counter"])+1;
+                else
+                    sessionStorage["counter"] = 1;
+                document.getElementById("numThisSession").innerHTML = sessionStorage["counter"];
+            }
+            </script>
+    </head>
+    <body onload="count()">
+        <h1>Hi! You have visited <span id="numVisits"></span> times in total.</h1>
+        <p>Of those visits, there were <span id="numThisSession"></span> in this tab.</p>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+AJAX exercise: More! 
+
+For this exercise, use the Lorem Ipsum server to load one paragraph of lorem ipsum
+at a time. When the page loads, it should display the first paragraph. Then
+each time the user clicks "more", it should load 1 more paragraph.
+
+When you send the AJAX request to the Lorem Ipsum server, don't override the
+5 second delay. Make sure that the user is somehow prevented from requesting
+a new paragraph before the last one has arrived. Make sure this also works for
+the first paragraph.
+
+Your job is to fill in the more.js file with the JavaScript and jQuery
+statements that will make the above work. You should not have to change this file.
+
+Sam Scott, June 2012
+-->
+<html>
+    <head>
+        <title>More!</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="js/jquery-1.10.0.js"></script>
+        <script type="text/javascript" src="js/more.js"></script>
+        <link rel="stylesheet" href="css/more.css">
+    </head>
+    <body>
+        <div>
+            <h1>Here's Some Lorem Ipsum</h1>
+            <div id="lipsum">
+                <p></p>
+            </div>
+            <input type="button" id="morebutton" value="More!">
+        </div>
+    </body>
+</html>

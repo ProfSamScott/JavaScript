@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+Tests of the ordinary JavaScript event handlers.
+
+Sam Scott, June 2012
+-->
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            // click handler function
+            function clickHandler1(event) {
+                var msg = "ClickHandler1: click triggered by " + event.target.id + " at location " + event.clientX + "," + event.clientY;
+                document.getElementById("message").innerHTML = msg;
+            }
+
+            // called when window loaded
+            window.addEventListener("load", function (event) {
+                // click handler function
+                function clickHandler2(event) {
+                    var msg = "ClickHandler2: click triggered by " + event.target.id + " at location " + event.clientX + "," + event.clientY;
+                    document.getElementById("message").innerHTML = msg;
+                }
+
+                document.getElementById("test2").onclick = clickHandler2;
+            });
+        </script>
+        <style type="text/css">
+            div {
+                margin:10px;
+                padding:5px;
+                border:1px solid black;
+            }
+            #test1, #test2 {
+                cursor:pointer;
+            }
+            td {
+                border:1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="test1" onclick="clickHandler1(event);">Click handler 1 added in HTML.</div>
+        <div id="test2">Click handler 2 added in JavaScript.</div>
+        <div id="message"><br></div>
+    </body>
+</html>

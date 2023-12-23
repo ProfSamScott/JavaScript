@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas Test Bed</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <style type="text/css">
+            #canvas1 {
+                background-color:lightgray;
+                margin:30px;
+            }
+            body {
+                text-align:center;
+            }
+        </style>
+        <script type="text/javascript">        
+            function keyPressed(event) {
+                x = event;
+                var c = document.getElementById("canvas1");
+                var ctx = c.getContext("2d");
+                ctx.clearRect(0,0,c.width,c.height);
+                ctx.fillText("Key Down: "+event.keyCode,180,200)
+            }
+            
+             function keyReleased(event) {
+                x = event;
+                var c = document.getElementById("canvas1");
+                var ctx = c.getContext("2d");
+                ctx.clearRect(0,0,c.width,c.height);
+                ctx.fillText("Key Up: "+event.keyCode,180,200)
+            }
+        </script>
+    </head>
+    <body onkeydown="keyPressed(event)" onkeyup="keyReleased(event)" >
+        <h1>Canvas Test Bed</h1>
+        <canvas id="canvas1" width="400" height="400"></canvas>
+        <br>
+        <input type="button" value="Button 1">
+        <input type="button" value="Button 2">
+        <input type="button" value="Button 3">
+        <input type="button" value="Button 4">
+    </body>
+</html>

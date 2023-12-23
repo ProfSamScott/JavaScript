@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--
+This page is a handout on form elements in HTML5. 
+
+In particular, look at:
+    <textarea>
+    <select>
+    <input type="number / range / email / url">
+    <label>
+    <fieldset> and <legend>
+
+Note the use of onsubmit="return false;" in the <form> tag. What is this for?
+
+Sam Scott, May 2012
+-->
+<html>
+    <head>
+        <title>Form Element Examples</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+            table {
+                border-collapse:collapse;
+                width:500px;
+            }
+            td {
+                border:1px solid black; 
+            }
+            th {
+                border:1px solid black;
+                background-color:lightblue;
+                text-align:left;
+            }
+            td.output {
+                background-color:lightyellow;
+                width:100px;
+            }
+            h1 {
+                font-size:18px;
+                font-family:sans-serif;
+            }
+        </style>
+        <script type="text/javascript">
+            function setText(id) {
+                document.getElementById(id).innerHTML = document.forms["testform"]["input"+id].value;
+            }
+            function setTextArray(id) {
+                var buttonArray = document.forms["testform"]["input"+id];
+                var output = document.getElementById(id);
+                output.innerHTML = "";
+                for (var i=0; i<buttonArray.length; i++)
+                    output.innerHTML += buttonArray[i].checked+" ";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>HTML4: Input Types</h1>
+        <form name="testform" onsubmit="return false;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Form Element</th>
+                        <th>Example</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Button (onclick)</td>
+                    <td><input name="input1" type="button" value="A Button" onclick="setText('1')"></td>
+                    <td id="1" class="output"></td>
+                </tr>
+                <tr>
+                    <td>Text Field (onchange)</td>
+                    <td><input name="input2" type="text" value="" onchange="setText('2')"></td>
+                    <td id="2" class="output"></td>
+                </tr>
+                <tr>
+                    <td>Password (onchange)</td>
+                    <td><input name="input3" type="password" value="" onchange="setText('3')"></td>
+                    <td id="3" class="output"></td>
+                </tr>
+                <tr>
+                    <td>Radio (onclick)</td>
+                    <td>
+                        <input name="input4" type="radio" onclick="setTextArray('4')" checked>Option 1
+                        <input name="input4" type="radio" onclick="setTextArray('4')">Option 2
+                        <input name="input4" type="radio" onclick="setTextArray('4')">Option 3
+                    </td>
+                    <td id="4" class="output"></td>
+                </tr>              
+                <tr>
+                    <td>Checkbox (onclick)</td>
+                    <td>
+                        <input name="input5" type="checkbox" onclick="setTextArray('5')">Option 1
+                        <input name="input5" type="checkbox" onclick="setTextArray('5')">Option 2
+                        <input name="input5" type="checkbox" onclick="setTextArray('5')" checked>Option 3
+                    </td>
+                    <td id="5" class="output"></td>
+                </tr> 
+                <tr>
+                    <td>Reset (onclick)</td>
+                    <td><input name="input6" type="reset" onclick="setText('6');return confirm('Do you really want to reset?');"></td>
+                    <td id="6" class="output"></td>
+                </tr> 
+            </table>
+
+            <br>
+            <h1>HTML4: Other Form Elements</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Form Element</th>
+                        <th>Example</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Text Area (onchange)</td>
+                    <td><textarea name="input7" rows="10" cols="30" onchange="setText('7')">Default Text</textarea></td>
+                    <td id="7" class="output"></td>
+                </tr> 
+                <tr>
+                    <td>Drop Down List (onchange)</td>
+                    <td>
+                        <select name="input8" onchange="setText('8')">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="fiat" selected="selected">Fiat</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </td>
+                    <td id="8" class="output"></td>
+                </tr> 
+            </table>
+
+            <br>
+            <h1>HTML5: Input Types (Chrome)</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Form Element</th>
+                        <th>Example</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Email (onchange)</td>
+                    <td><input name="input9" type="email" onchange="setText('9')" value="email goes here"><input type="submit"></td>
+                    <td id="9" class="output"></td>
+                </tr>
+                <tr>
+                    <td>URL (onchange)</td>
+                    <td><input name="input10" type="url" onchange="setText('10')" value="url goes here"><input type="submit"></td>
+                    <td id="10" class="output"></td>
+                </tr>
+                <tr>
+                    <td>Number (onchange)</td>
+                    <td><input name="input11" type="number" onchange="setText('11')" min="1" max="10"><input type="submit"></td>
+                    <td id="11" class="output"></td>
+                </tr>
+                <tr>
+                    <td>Range (onchange)</td>
+                    <td><input name="input12" type="range" onchange="setText('12')" min="0" max="10" step="2" value="0"><input type="submit"></td>
+                    <td id="12" class="output"></td>
+                </tr>
+            </table>
+
+            <br>
+            <h1>HTML4: Use of Fieldset, Legend, and Label tags</h1>
+            <fieldset style="width:500px;">
+                <legend>Example</legend>
+                <input name="input13" id="i13o1" type="radio">
+                <label for="i13o1">Option 1</label>
+                <input name="input13" id="i13o2" type="radio">
+                <label for="i13o2">Option 2</label>
+                <input name="input13" id="i13o3" type="radio">
+                <label for="i13o3">Option 3</label>
+                <br>
+                <input name="input14" id="i14o1" type="checkbox">
+                <label for="i14o1">Option 1</label>
+                <input name="input14" id="i14o2" type="checkbox">
+                <label for="i14o2">Option 2</label>
+                <input name="input14" id="i14o3" type="checkbox">
+                <label for="i14o3">Option 3</label>
+            </fieldset>
+        </form>
+        
+        <br>
+        <h1>HTML5: Use of Output Element with OnInput Event</h1>
+        <form oninput="out.value=inp.value">
+            <input type="text" name="inp"><output name="out" for="inp"></output>
+        </form>
+    </body>
+</html>

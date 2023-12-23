@@ -1,0 +1,27 @@
+<!--
+Use this HTML front end and add the necessary JavaScript code so that when the
+user hits submit, the following happens:
+
+1. Launch an Ajax query for the file canada.xml.
+2. In the callback function, search for the <division> tag with a type of
+"province" and a name that matches what the user typed. Display the capital
+city below the form. If the province is not found, display "not a province".
+
+Sam Scott, June 2012
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Provincial Capitals</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Provincial Capitals</h1>
+        <form onsubmit="return false">
+            Province Name: 
+            <input type="text" id="provinceName">
+            <input type="button" value="Go" id="gobutton">
+        </form>
+        <p id="messageArea"></p>
+    </body>
+</html>

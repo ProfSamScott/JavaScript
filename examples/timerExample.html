@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- 
+Simple examples of timer use in JavaScript
+
+Sam Scott, February 2014
+-->
+<html>
+    <head>
+        <title>Timer Examples</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript">
+			window.addEventListener("load", function() {
+				// variable to hold the timer event id
+				// - this is so it can be stopped later
+				var ticker;
+
+				// display the alarm message
+				function alarm() {
+					document.getElementById("output").innerHTML += "***ALARM***<br>";
+				}
+
+				// display a "tick" message
+				function tick() {
+					document.getElementById("output").innerHTML += "tick<br>";
+				}
+
+				// stop both timers
+				function stopTicker() {
+					clearInterval(ticker);
+				}
+
+				// start both timers
+				function startTimers() {
+					// Create a one-time timer event for 5.25 seconds from now
+					alarm = setTimeout(alarm, 5250);
+					// create a repeating timer event every 0.5 seconds
+					ticker = setInterval(tick, 500);
+				}
+				
+				document.querySelector("input").onclick = stopTicker;
+				startTimers();
+				
+			});
+        </script>
+    </head>
+    <body onload="startTimers();">
+        <h1>Timing Examples</h1>
+        <input type="button" value="stop">
+        <p id="output"></p>
+    </body>
+</html>

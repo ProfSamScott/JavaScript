@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+1. When the document is ready, launch an AJAX query for cdcatalog.xml
+2. In the callback function, create a table to become the innerHTML of
+the "messageArea" element. This table should contain artist, title, and
+price information for all entries in the catalog.
+
+EXTRA: Add a form for the user to select a decade, then get the file with
+AJAX and this time only display entries from the chosen decade.
+
+ADVICE: First, just get all the CDs
+
+Sam Scott, June 2012
+-->
+<html>
+    <head>
+        <title>CD Catalog</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+            table {
+                border:1px solid black;
+                border-collapse:collapse;
+                width:500px;
+            }
+            td, th {
+                border:1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CD Catalog</h1>
+        <div id="messageArea">
+            <table>
+                <tr>
+                    <th>Artist</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

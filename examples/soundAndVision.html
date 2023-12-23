@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+An example of how to load images to draw on the canvas, and how to load sounds
+to play in reaction to page events.
+
+Images from the open clip art library. Sound modified from soundjay.com.
+
+Sam Scott, February 2014
+-->
+<html>
+    <head>
+        <title>Sound and Vision</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <style type='text/css'>
+            canvas {
+                border: 2px solid gray;
+                background-color:black;
+            }
+            body {
+                text-align:center;
+            }
+        </style>
+        <script type='text/javascript'>
+            // arrays to hold the egg locations
+            var eggsX = new Array();
+            var eggsY = new Array();
+
+            // coad to count the number of images and sounds loaded
+            var loads = 0;
+            function countLoads() {
+                loads++;
+            }
+            var audioloaded = false;
+            function soundLoaded() {
+                audioloaded = true;
+            }
+            
+            // create the sound and image objects
+            var birdImage = new Image();
+            birdImage.src = "images/bird.png";
+            birdImage.onload = countLoads;
+
+            var eggImage = new Image();
+            eggImage.src = "images/egg.png";
+            eggImage.onload = countLoads;
+
+            var birdSound = new Audio("sounds/squeeze-toy-5.mp3");
+            birdSound.oncanplaythrough = soundLoaded;
+            
+            // draws everything
+            function drawStuff(event) {
+                var c = event.target;
+                var ctx = c.getContext("2d");
+
+                // if loading not done, print message
+                if (loads < 2 && !audioloaded) {
+                    ctx.font = "30px Arial";
+                    ctx.fillStyle = "white";
+                    ctx.fillText("Still Loading...", 50, 50);
+                    return;
+                }
+
+                ctx.clearRect(0, 0, c.width, c.height);
+
+                for (var i = 0; i < eggsX.length; i++)
+                    ctx.drawImage(eggImage, eggsX[i], eggsY[i]);
+
+                var x = event.pageX - c.offsetLeft - 2;
+                var y = event.pageY - c.offsetTop - 2;
+                ctx.drawImage(birdImage, x - birdImage.width / 2, y - birdImage.height / 2);
+            }
+
+            // creates a new egg and plays the egg laying sound
+            function layEgg(event) {
+                if (loads == 2 && audioloaded) {
+                    var c = event.target;
+                    var x = event.pageX - c.offsetLeft - 2;
+                    var y = event.pageY - c.offsetTop - 2;
+                    eggsX[eggsX.length] = x - eggImage.width / 2;
+                    eggsY[eggsY.length] = y + 50;
+                    birdSound.load();
+                    birdSound.play();
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Click on the Canvas.</h1>
+        <canvas onmousemove='drawStuff(event)' onclick='layEgg(event)' 
+                width='800' height='600'></canvas>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--
+Sets up an XML dom to play with in the console. Uses the note xml 
+example from 11.5 of the text.
+
+Sam Scott, July 2012
+-->
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            var xmlDoc = "<note type='reminder'><to>Sam</to><from>Anne</from><text>Don't forget the groceries.</text></note>";
+            var parser = new DOMParser();
+            var dom = parser.parseFromString(xmlDoc,"text/xml");
+        </script>
+    </head>
+    <body>
+        <p>Open the JavaScript console and explore the xmlDoc and dom variables. See the source code of this page for how they were created.</p>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+Exercise: When the button is pressed, send an AJAX request to
+https://csunix.mohawkcollege.ca/~scott/comp10065/week12/servers/cities.php
+with get parameters min and max. The response will be a JSON encoded array.
+Use the array to list the names of the cities returned in a <ul> element on 
+the page.
+-->
+<html>
+    <head>
+        <title>Cities Exercise</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-1.7.2.js"></script>
+        <script>
+            $(document).ready(function() {
+                // add your code here
+            });
+        </script>
+    </head>
+    <body>
+        <input type="number" id="min" min="0" placeholder="Min Population">
+        <input type="number" id="max" min="0" placeholder="Max Population">
+        <input type="button" value="Get Cities">
+        <ul id="output"></ul>
+    </body>
+</html>

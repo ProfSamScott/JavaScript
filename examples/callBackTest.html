@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+Tests of the callback functions in jQuery.
+
+Sam Scott, June 2012
+-->
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="js/jquery-1.10.0.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                // slide function demonstrating the use of a callback
+                var slideFunction = function() {
+                    $("#div1").slideUp(500, function() {
+                        $("div").slideDown(500);
+                    });
+                };
+
+                // add the handler and slide up the first div
+                $("#div1").click(slideFunction);
+                $("#div2").slideUp();
+            });
+        </script>
+        <style type="text/css">
+            div {
+                border:1px solid black;
+                background-color:gray;
+                font-size:40px;
+                width:200px;
+                height:200px;
+                position:absolute;
+            }
+            #div1 {
+                left:0px;
+            }
+            #div2 {
+                left:220px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1">
+            click me!
+        </div>
+        <div id="div2">
+
+        </div>
+    </body>
+</html>

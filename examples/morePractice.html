@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+An Exercise. Try to write jQuery code so that the add buttons add
+rows and columns to the table, and the delete buttons delete rows and columns.
+
+This one can get tricky!
+
+Sam Scott, June 2012
+-->
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="js/jquery-1.10.0.js"></script>
+        <style type="text/css">
+            table, tr, td {
+                border-collapse:collapse;
+                border:1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <form name="theform" onsubmit="return false">
+            <input type="button" value="add row" id="addrowbutton"> 
+            <input type="button" value="add column" id="addcolbutton"> 
+            <input type="button" value="delete row" id="delrowbutton"> 
+            <input type="button" value="delete column" id="delcolbutton"> 
+        </form>
+        <br>
+        <table id="thetable">
+            <tr><td>X</td><td>X</td></tr>
+            <tr><td>X</td><td>X</td></tr>
+        </table>
+    </body>
+</html>
