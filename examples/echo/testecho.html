@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-3.1.1.min.js"></script>
+        <script>
+            $.get("echo.php", {message: "Hello, World!"}, alerting);
+            function alerting(message) {
+                alert(message);
+            }
+            
+        </script>
+    </head>
+    <body>
+        <p>Did it work?</p>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+/* 
+    Document   : dropdownmenu
+    Created on : Feb 16, 2012, 3:38:54 PM
+    Author     : scottsam
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#container {
+    margin:auto;
+    background-color:darkkhaki;
+    width:730px;
+    border:2px solid darkslategray;
+    padding:5px;
+}
+#catchMenu {
+    text-align:center;
+}
+#navbar {
+    margin:auto;
+    width:100%;
+    text-align:center;
+    background-color:khaki;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+img.rabbitpic {
+    position:relative;
+    width:90px;
+    height:50px;
+}
+div.bigMenu {
+    position:absolute;
+    top:158px;
+    margin-left:50px;
+    width:600px;
+    background-color:darkslategray;
+    color:white;
+    padding:10px;
+    visibility:hidden;
+}
+div.menuItem {
+    margin:1px;
+    background-color:lightgray;
+    color:darkslategray;
+    padding:10px;
+    padding-left:50px;
+    padding-right:50px;
+    display:inline;
+    cursor:pointer;
+}
+div.menuItemHover {
+    margin:1px;
+    padding:10px;
+    padding-left:50px;
+    padding-right:50px;
+    display:inline;
+    background-color:darkslategray;
+    color:lightgray;
+    cursor:pointer;
+}
+a {
+    color:white;
+    text-decoration:none;
+}
+
+

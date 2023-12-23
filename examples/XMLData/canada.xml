@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Canada information. Original Author: Joe Sant.
+-->
+<country>
+    <name>Canada</name>
+    <background>
+        Land of vast distances and rich natural resources, Canada became a self-governing dominion in 1867 while retaining ties to the British crown. Economically and technologically the nation has developed in parallel with the US, its neighbor to the south across an unfortified border. Canada faces the political challenges of meeting public demands for quality improvements in health care and education services, as well as responding to the particular concerns of predominantly francophone Quebec. Canada also aims to develop its diverse energy resources while maintaining its commitment to the environment.
+    </background>
+    <population date="July 2010" type="estimate">33,759,742</population>
+    <administrative_divisions>
+        <division type="province" name="Alberta">
+            <capital>Edmonton</capital>
+            <city>Edmonton</city>
+            <city>Calgary</city>
+            <city>Lethbridge</city>
+        </division>
+        <division type="province" name="British Columbia">
+            <capital>Victoria</capital>
+            <city>Victoria</city>
+            <city>Vancouver</city>
+            <city>Kelowna</city>
+        </division>
+        <division type="province" name="Manitoba">
+            <capital>Winnepeg</capital>
+            <city>Winnepeg</city>
+            <city>Brandon</city>
+            <city>Moose Jaw</city>
+        </division>
+        <division type="province" name="New Brunswick">
+            <capital>Fredericton</capital>
+            <city>Fredericton</city>
+            <city>Moncton</city>
+        </division>
+        <division type="province" name="Newfoundland and Labrador">
+            <capital>St. John's</capital>
+            <city>Cornerbrook</city>
+            <city>St. John's</city>
+        </division>
+        <division type="territory" name="Northwest Territories">
+            <capital>Yellowknife</capital>
+            <city>Yellowknife</city>
+        </division>
+        <division type="province" name="Nova Scotia">
+            <capital>Halifax</capital>
+            <city>Halifax</city>
+            <city>Truro</city>
+        </division>
+        <division type="territory" name="Nunavut">
+            <capital>Iqualuit</capital>
+            <city>Iqualuit</city>
+        </division>
+        <division type="province" name="Ontario">
+            <capital>Toronto</capital>
+            <city>Toronto</city>
+            <city>Hamilton</city>
+            <city>London</city>
+            <city>Ottawa</city>
+            <city>Windsor</city>
+        </division>
+        <division type="province" name="Prince Edward Island">
+            <capital>Charlottetown</capital>
+            <city>Charlottetown</city>
+        </division>
+        <division type="province" name="Quebec">
+            <capital>Quebec City</capital>
+            <city>Montreal</city>
+            <city>Quebec City</city>
+        </division>
+        <division type="province" name="Saskatchewan">
+            <capital>Regina</capital>
+            <city>Regina</city>
+            <city>Saskatoon</city>
+        </division>
+        <division type="territory" name="Yukon Territory">
+            <capital>Whitehorse</capital>
+            <city>Whitehorse</city>
+        </division>
+    </administrative_divisions>
+</country>

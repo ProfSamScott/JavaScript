@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+Use to test POST parameters with the Lorem Ipsum JSON server.
+
+EXERCISE: Based on the ajaxTime.html example, convert this page so that instead
+of loading a new page, it launches an AJAX request and places the result below
+the form with each array element in the result in a new <p> element. 
+
+Sam Scott, April 2015
+-->
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>POST Interface for Lorem Ipsum Server</h1>
+        <form action="loremIpsumServer_json.php" method="POST">
+            cstart: <input type="number" name="cstart"><br>
+            clength: <input type="number" name="clength"><br>
+            delay: <input type="number" name="delay"><br>
+            <input type="submit">
+        </form>
+    </body>
+</html>

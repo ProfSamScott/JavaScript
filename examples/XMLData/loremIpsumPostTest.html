@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+Use to test POST parameters with the Lorem Ipsum server.
+
+EXERCISE: Based on the ajaxTime.html example, convert this page so that instead
+of loading a new page, it launches an AJAX request and places the result below
+the form. 
+
+1. Set up a new <p> element to display the data.
+
+2. Set up an event in response to the button click (Two choices: change the
+"submit" button to a regular button and use a "click" event, or add a "submit" 
+event to the form itself. If you take the second option, make sure your event
+handler returns false or the form will trigger a page reload.)
+
+3. In the event handler, launch a $.post() request with a callback function
+that puts the data into the <p> element you created in step 1.
+
+YOU CAN DO IT!
+
+Sam Scott, June 2012
+-->
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>POST Interface for Lorem Ipsum Server</h1>
+        <form action="loremIpsumServer.php" method="POST">
+            cstart: <input type="number" name="cstart"><br>
+            clength: <input type="number" name="clength"><br>
+            delay: <input type="number" name="delay"><br>
+            <input type="submit">
+        </form>
+    </body>
+</html>
