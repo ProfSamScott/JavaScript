@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas Test Bed</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <style type="text/css">
+            #canvas2 {
+                border:30px solid black;
+                background-color:white;
+            }
+            #canvas1 {
+                background-color:lightgray;
+                margin:30px;
+            }
+            body {
+                text-align:center;
+            }
+        </style>
+        <script type="text/javascript">
+            function whereClicked(event) {
+                var c = event.target;
+                var ctx = c.getContext("2d");
+                var x = event.pageX - c.offsetLeft;
+                var y = event.pageY - c.offsetTop;
+                ctx.fillText("(" + x + "," + y + ")", x, y);
+                console.log(c.id+" (" + x + "," + y + ")");
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Canvas Test Bed</h1>
+        <canvas id="canvas1" onclick="whereClicked(event);" width="400" height="400"></canvas>
+        <canvas id="canvas2" onclick="whereClicked(event);" width="400" height="400"></canvas>
+        <br>
+        <input type="button" value="Button 1">
+        <input type="button" value="Button 2">
+        <input type="button" value="Button 3">
+        <input type="button" value="Button 4">
+    </body>
+</html>

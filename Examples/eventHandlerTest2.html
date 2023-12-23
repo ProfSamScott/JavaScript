@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+Tests of the jQuery event handler system and side-by-side comparision to
+the ordinary JavaScript system.
+
+Sam Scott, June 2012
+-->
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="js/jquery-1.10.0.js"></script>
+        <script type="text/javascript">
+            // click handler function
+            function clickHandler(event) {
+                var msg = "click triggered by "+event.target.id+" at location "+event.clientX+","+event.clientY;
+                document.getElementById("message").innerHTML=msg;
+            }
+            
+            // called when window loaded
+            window.addEventListener("load", function(event) {
+                document.getElementById("test2").onclick=clickHandler;
+            });
+            
+            // jquery click handler additions
+            $(document).ready( function() {
+                // adds predefined clickHandler function
+                $("td").click(clickHandler);
+                // adds function defined on the fly
+                $("#test4").mouseenter( function (event) {
+                    $(this).css("backgroundColor","lightblue");
+                });
+                // adds function defined on the fly
+                $("#test4").mouseleave( function (event) {
+                    $(this).css("backgroundColor","");
+                });
+            });
+        </script>
+        <style type="text/css">
+            div {
+                margin:10px;
+                padding:5px;
+                border:1px solid black;
+            }
+            td {
+                border:1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="test1" onclick="clickHandler(event);">Click handler added in HTML.</div>
+        <div id="test2">Click handler added with plain JavaScript.</div>
+        <div id="test3">Click handlers added with jQuery.
+            <table>
+                <tr><td id="cell11">click me</td><td id="cell12">click me</td></tr>
+                <tr><td id="cell21">click me</td><td id="cell22">click me</td></tr>
+            </table>
+        </div>
+        <div id="test4">Mouse enter and mouse leave handlers added with jQuery.
+            <table>
+                <tr><td id="cell31">click me</td><td id="cell32">click me</td></tr>
+                <tr><td id="cell41">click me</td><td id="cell42">click me</td></tr>
+            </table>
+        </div>
+        <div id="message"><br></div>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+1. User selects paragraph and sentence numbers.
+2. Launch an Ajax request. Use the pstart and plength parameters with format=xml
+to get the paragraph you want.
+3. Search the xml for the sentence they asked for.
+4. Append that sentence to the end of the message area.
+
+Sam Scott, July 2012.
+-->
+
+<html>
+    <head>
+        <title>Lorem Ipsum Sentences</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Build Your Own Lorem Ipsum</h1>
+        <h2>Choose the next sentence</h2>
+        <form name="lipsumform" onsubmit="return false">
+            Paragraph:
+            <input type="number" value="0" min="0">
+            Sentence:
+            <input type="number" value="0" min="0">
+            <input type="button" value="Add Sentence">
+        </form>
+        <h2>Your Sentence</h2>
+        <p id="messageArea"></p>
+    </body>
+</html>

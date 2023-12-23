@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+Example Animation
+Sam Scott, February 2014
+-->
+<html>
+    <head>
+        <title>Example Animation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script type='text/javascript'>
+            // Following best practices, it's all inside a window load event
+            window.addEventListener("load", function (event) {
+                // global variables (global to this function, that is)
+                // to control the animation
+                var radius = 50;
+                var x = 0, y = 200;     // location
+                var timerId;            // holds the id of the timer
+
+                // starts the animation
+                function startAnimation() {
+                    // 16  milliseconds works out to 62.5 frames per second.
+                    // for games, 60 frames per second is standard
+                    timerId = setInterval(updateAnimation, 16);
+                }
+
+                // stops the animation
+                function stopAnimation() {
+                    clearTimeout(timerId);
+                }
+
+                // This function is called every 16 milliseconds
+                function updateAnimation() {
+                    // 1. Update the animation variables
+                    x = x + 2;
+
+                    // 2. Change some CSS properties
+                    var e = document.getElementById("movingBall");
+                    e.style.left=x+"px";
+                    e.style.top=y+"px";
+
+                    // stop the animation if the ball is at the edge of the screen
+                    // window.innerWidth is the current width of the browser
+                    if (x >= window.innerWidth - radius*2)
+                        stopAnimation();
+                }
+                
+                // Start things up!
+                startAnimation();
+            });
+        </script>
+        <style>
+            #movingBall {
+                position: absolute;
+                width:100px;
+                height:100px;
+                border-radius:200px;
+                background-color:black;
+                top:200px;
+                left:0px;
+            }
+        </style>
+    </head>
+    <body style='text-align:center;'>
+        <div id="movingBall"></div>
+    </body>
+</html>

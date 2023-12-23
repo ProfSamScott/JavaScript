@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- 
+AJAX time demo.
+Sam Scott, Mohawk College, 2017 
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Ajax Time Demonstration</title>
+        <script src="js/jquery-1.7.2.js"></script>
+        <script src="js/ajaxTime2.js"></script>
+        <link rel="stylesheet" href="css/ajaxTime.css">
+    </head>
+    <body>
+        <h1>Ajax Time Server Demonstration</h1>
+        <fieldset class="frame">
+            <legend><b>This form launches the request</b></legend>
+            <form name="userInput" onsubmit="return false">
+                Request: 
+                <select name="request">
+                    <option value=""></option>
+                    <option value="time">Time</option>
+                    <option value="date">Date</option>
+                    <option value="day">Day</option>
+                    <option value="month">Month</option>
+                    <option value="year">Year</option>
+                </select><br>
+                Time Zone:
+                <input name="timezone" value="Canada/Eastern"><br>
+                Delay:
+                <input name="delay" value="0"><br>         
+                <input type="button" id="ajaxButton" value="AJAX!">
+            </form>
+        </fieldset>
+        <br>
+        <fieldset class="frame">
+            <legend><b>The result will appear below</b></legend>
+            <p id="result"></p>
+        </fieldset>
+
+
+    </body></html>

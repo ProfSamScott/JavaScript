@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+AJAX exercise: The Lorem Ipsum game. 
+
+The idea behind this game is that it uses 
+the Lorem Ipsum server to extract a random passage (1 to 200 characters long,
+starting at character 0 to 10000) using an AJAX request. It displays what it
+fetched in the #targetText element.
+
+Then it invites the reader to guess the length and the starting index. After 
+each guess, it fetches the passage they specified and displays it in the
+#fetchedText element. Then it tells them in the #messageArea element whether
+the index and length were too high, too low, or just right.
+
+Your job is to fill in the findLorem.js file with the JavaScript and jQuery
+statements that will make this work. You should not have to change this file.
+
+Here are some pointers on how to proceed:
+
+1. All your code should be inside the document ready event.
+
+2. Use the following steps to develop your solution
+    a. Get the random piece of text from the lorem ipsum server and display it.
+    b. Add a submit event handler to the form. Make sure the handler returns
+       false or submitting will cause a page reload and we don't want that.
+    c. Fill in code for the submit event handler so that it reads the values
+       from the form and uses them to get a piece of text from the lorem 
+       ipsum server and display it.
+    d. Expand the event handler code so that it also gives the user feedback
+       on their guess.
+
+3. The Lorem Ipsum Server is included in this package, but to use it you will
+   need to host it on a web server. It might be easier for now to just use
+   the one I hosted at http://www-acad.sheridanc.on.ca/~scottsam/servers/loremIpsumServer.php
+
+4. Extras
+    a. Use form validation to prevent the user from getting errors back from the server.
+    b. If they get some of the target text, highlight it. For example, if the
+       target is "Duis non tortor at sem posuere tristique. Mauris quis accumsan"
+       and they get "tus sed mi. Duis non tortor", the "Duis non tortor" part 
+       should be highlighted somehow.
+
+Author: Sam Scott, June 2012
+STUDENTS ADD YOUR NAME HERE
+-->
+<html>
+    <head>
+        <title>The Lorem Ipsum Game</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="js/jquery-1.10.0.js"></script>
+        <script type="text/javascript" src="js/findLorem.js"></script>
+        <link rel="stylesheet" href="css/findLorem.css">
+    </head>
+    <body>
+        <div>
+            <h1>The Lorem Ipsum Game</h1>
+        </div>
+        <div>
+            <h2>Target Text</h2>
+            <p id="targetText"></p> <!--This is where the randomly selected passage goes-->
+        </div>
+        <div>
+            <h2>Your Guess</h2>
+            <p id="fetchedText"></p> <!--This is where the user's passage goes-->
+        </div>
+        <div>
+            <!--This is where the user enters their guess-->
+            <form name="input"> 
+                Start: <input type="number" name="cstart" class="number" value="0"> 
+                Length: <input type="number" name="clength" class="number" value="0">
+                <input type="submit">
+            </form>
+        </div>
+        <div>
+            <h2>Feedback</h2>
+            <p id="messageArea">No Guesses Yet</p> <!--This is where the feedback on the guess goes-->
+        </div>
+        <div>
+            <a href="http://www.lipsum.com/" target="lipsum">Study Lorem Ipsum</a>
+        </div>
+    </body>
+</html>

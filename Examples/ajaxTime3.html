@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+An example of how to use AJAX to load data from a server with JSON. The data source
+is the ajaxTime_json.php server. This file must be uploaded to a server or running
+on a local server in order to function. If you simply load it into a browser, 
+it is not going to work.
+
+Sam Scott, April 2015.
+-->
+<html>
+    <head>
+        <title>Ajax JSON Time Demonstration</title>
+        <meta charset="UTF-8">
+        <script src="js/jquery-1.7.2.js"></script>
+        <script src="js/ajaxTime3.js"></script>
+        <link rel="stylesheet" href="css/ajaxTime.css">
+    </head>
+    <body>
+        <h1>Ajax JSON Time Server Demonstration</h1>
+        <fieldset class="frame">
+            <legend><b>This form launches the request</b></legend>
+            <form name="userInput" onsubmit="return false">
+                Time Zone:
+                <input name="timezone" value="Canada/Eastern"><br>
+                Delay:
+                <input name="delay" value="0"><br>         
+                <input type="button" id="ajaxButton" value="AJAX!">
+            </form>
+        </fieldset>
+        <br>
+        <fieldset class="frame">
+            <legend><b>The result will appear below</b></legend>
+            <p id="result">&nbsp;</p>
+        </fieldset>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+Example Canvas Animation
+Sam Scott, February 2014
+-->
+<html>
+    <head>
+        <title>Example Canvas Animation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script type='text/javascript'>
+            // Following best practices, it's all inside a window load event
+            window.addEventListener("load", function (event) {
+                // global variables (global to this function, that is)
+                // to control the animation
+                var x = 100, y = 200;     // location
+                var radius = 100;       // circle size
+                var timerId;            // holds the id of the timer
+
+                // starts the animation
+                function startAnimation() {
+                    // 16  milliseconds works out to 62.5 frames per second.
+                    // for games, 60 frames per second is standard
+                    timerId = setInterval(updateAnimation, 16);
+                }
+
+                // stops the animation
+                function stopAnimation() {
+                    clearTimeout(timerId);
+                }
+
+                // This function is called every 16 milliseconds
+                function updateAnimation() {
+                    // 1. Update the animation variables
+                    x = x + 2;
+
+                    // 2. Clear the canvas
+                    var canvas = document.getElementById("animationCanvas");
+                    var ctx = canvas.getContext("2d");
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                    // 3. Draw the frame
+                    ctx.fillStyle = "black";
+                    ctx.beginPath();
+                    ctx.arc(x, y, radius, 0, Math.PI * 2);
+                    ctx.closePath();
+                    ctx.fill();
+
+                    // stop the animation if the ball is at the edge of the canvas
+                    if (x >= canvas.width - radius)
+                        stopAnimation();
+                }
+                
+                // Start things up!
+                startAnimation();
+            });
+        </script>
+    </head>
+    <body style='text-align:center;'>
+        <canvas id='animationCanvas' width='768' height='400' style='background-color:yellow;'></canvas>
+    </body>
+</html>

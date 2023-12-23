@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple innerHTML Example</title>
+        <style>
+            div {border: 1px solid black;}
+        </style>
+    </head>
+    <body>
+        <h1>A Simple Example</h1>
+        <div id='target' style="color:red">Here is some text in a div.</div>
+        <script>
+            alert("Press OK to see me change the contents of my div.");
+            document.getElementById("target").innerHTML = 
+                    "<p>First paragraph</p><p>Second paragraph</p>";
+        </script>
+    </body>
+</html>

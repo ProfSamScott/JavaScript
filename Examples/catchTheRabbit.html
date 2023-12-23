@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+Try to turn this into a "catch the rabbit" game where the rabbit moves whenever
+you mouse over it. After 4 attempts to mouse over, it shoudl show the "No Easter
+Eggs" message. After 20 attempts, it should show "Humans Suck".
+
+Hint: Use visibility:hidden and visibility:visible to hide/show the rabbit 
+images. For the messages, you could use visibility, or the display property 
+(set to "none" or ""), or you could set the colors to make them appear and
+disappear.
+
+Sam Scott, May 2012
+-->
+<html>
+    <head>
+        <title>Catch the Rabbit</title>
+        <meta charset="UTF-8">
+        <script src="javascript/catchtherabbit.js"></script>
+        <link rel="stylesheet" href="css/catchTheRabbit.css"/>
+    </head>
+    <body>
+        <h1>Catch the Easter Bunny to get your egg!</h1>
+        <img src="images/rabbit.png" id="rabbit1" onmouseover="" alt="Catch the rabbit"/>
+        <img src="images/rabbit.png" id="rabbit2" onmouseover="" alt="Catch the rabbit"/>
+        <img src="images/rabbit.png" id="rabbit3" onmouseover="" alt="Catch the rabbit"/>
+        <img src="images/rabbit.png" id="rabbit4" onmouseover="" alt="Catch the rabbit"/>
+        <h2 id="noeggs">No Easter Eggs for You</h2>
+        <h2 id="yousuck">Humans are dumb!!!</h2>
+    </body>
+</html>

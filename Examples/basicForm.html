@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+Demonstration of basic form elements.
+
+Sam Scott, February 2012
+-->
+<html>
+    <head>
+        <title>Basic form</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div style="positioning:relative;margin:10px;padding:10px;background-color:dodgerblue;width:450px">
+            <h1>Please Register or Sign In Below</h1>
+        </div>
+        <div style="positioning:relative;margin:10px;padding:10px;background-color:burlywood;width:450px">
+            <form name="form1">
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:20%">User Name:</td>
+                        <td><input type="text" name="name"></td>
+                    </tr>
+                    <tr><td>Password:</td><td><input type="password" name="password"></td></tr>
+                    <tr>
+                        <td>New User?</td>
+                        <td>
+                            <input type="radio" name="newuser" id="me" value="true" checked>Yes 
+                            <input type="radio" name="newuser" value="false">No 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align:top">Interests:</td>
+                        <td>
+                            <input type="checkbox" name="interests" value="gardening">Gardening<br>
+                            <input type="checkbox" name="interests" value="skiing" checked>Skiing<br>
+                            <input type="checkbox" name="interests" value="tv">Watching TV<br>
+                            <input type="checkbox" name="interests" value="drinking">Drinking<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="text-align:right">
+                            <input type="reset">
+                            <input type="submit">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <form id="form2">
+                
+            </form>
+        </div>
+    </body>
+</html>
