@@ -1,0 +1,536 @@
+/* 
+    Document   : formatting
+    Created on : 24-May-2013, 9: 32: 59 AM
+    Author     : Sam Scott, Sheridan College
+    Description: 
+        Style for JavaScript for Sheridan College Students.
+*/
+
+/* order for all properties
+    1. box model
+    2. colors
+    3. fonts
+    4. positioning
+    5. other 
+
+orange #ff9933
+crimson #990033
+burgundy #660033
+charcoal #333333
+*/
+* {
+    /* margin: 5px; */
+    padding: 0px;
+}
+dd {
+    margin-left:30px;
+    margin-bottom:10px;
+}
+dt {
+}
+dl {
+    font-size: 13pt;
+}
+img.halfsize {
+     /* suppresses netbeans warning */   
+}
+img.fullsize {
+    /* suppresses netbeans warning */
+}
+body {
+    font-size: 1em;
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    background-color: #cccccc;
+}
+td {
+    font-size:13pt;
+    font-family:inherit;
+    line-height:18pt;
+    padding:10px;
+    vertical-align: top;
+}
+div {
+    background-color: white;
+}
+div.JC {
+    width: 40%;
+    padding: 5px;
+    margin-right: 20px;
+    margin-bottom: 12pt;
+    margin-top: 12pt;
+    border: 6px double rgb(31,73,125);
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgb(99,108,120);
+    background-color: rgb(198,217,241);
+    float: left;
+}
+div.DIY {
+    margin-bottom:10pt;
+    margin-right:20px;
+    width: auto;
+    padding: 5px;
+    border: 6px double rgb(31,73,125);
+    border-radius: 10px;              
+    box-shadow: 10px 10px 5px rgb(128,128,102);
+    background-color: rgb(255,255,204);
+    page-break-before: auto;
+    clear:both;
+}
+div.wide {
+    width:auto;
+}
+div.exercises {
+    margin-bottom:10pt;
+    margin-right:20pt;
+    width: auto;
+    padding: 5px;      
+    border: 6px double black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgb(107,113,94);
+    background-color: rgb(214,227,188);
+    page-break-before: auto;
+    clear:both;
+}
+div.sectionStart {
+    padding:0px;
+    margin:0px;
+}
+div#container, div#titlePage {
+    width: 700px;
+    padding: 34px;
+    margin: auto;
+}
+div#titlePage {
+    text-align:center;
+    height:956px;
+    margin-bottom:20px;
+}
+div#title {
+    margin-bottom: 10pt;
+    text-align: center;
+}
+div#info {
+    text-align:center;
+    line-height:20pt;
+}
+div#navbar {
+    position:fixed;
+    bottom:50px;
+    right:10px;
+    background-color: transparent;
+    opacity: 0;
+
+    -webkit-transition: opacity 1s linear;
+    -moz-transition: opacity 1s linear;
+    -o-transition: opacity 1s linear;
+    -ms-transition: opacity 1s linear;
+    transition: opacity 1s linear;
+}
+div#cover {
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0px;
+    left:0px;
+    background-color: rgba(0,0,0,0.8);
+    color:white;
+    text-align:center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:50px;
+    font-weight:bold;
+}
+div#buttonBox {
+    text-align:center;
+    width:265px;
+    margin:auto;
+    padding:0px;
+    padding-bottom:300px;
+    padding-top:50px;
+}
+code {
+    margin: 0px;
+    font-size: inherit;
+    word-wrap: break-word;
+}
+code.first {
+    margin-left:20px;
+    margin-top:10pt;
+    margin-bottom:10pt;
+    font-size: inherit;
+    display:block;
+}
+code.new {
+    margin-left:30px;
+    display:block;
+}
+table {
+    margin: auto;
+}
+span {
+    margin:0px;
+}
+span.bold {
+    font-weight:bold;
+}
+span.italic {
+    font-style:italic;
+}
+span.printonly {
+    display:none;
+}
+span#title1 {
+    font-size: 65pt;
+    position: relative;
+    top: 15px;
+}
+span#title2 {
+    font-size: 14pt;
+    position: relative;
+    top: 0px;
+}
+span#title3 {
+    font-size: 40pt;
+    position: relative;
+    top: -15px;
+}
+span#title4 {
+    font-size: 14pt;
+    position: relative;
+    top: -25px;
+}
+span#author {
+    font-size: 16pt;
+    font-weight: bold;
+    color: #003767;   
+}
+span#date {
+    font-size: 16pt;
+    font-weight: bold;
+    color: #ff9933; 
+}
+img.howtobutton {
+    width:100%;
+    margin:0px;
+    padding:0px;
+    border:none;
+}
+img.jcImage, img.diyImage{
+    margin: 0px;
+    float: left;
+}
+img.jcImage {
+    width: 40px;
+}
+img.diyImage {
+    width: 25px;
+}
+img#logo {
+    width:auto;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Cambria, Arial, Helvetica, sans-serif;
+    margin-top: 0px;
+    clear:both;
+}
+h1{
+    border-bottom: rgb(23,54,93);
+    margin-bottom: 15pt;
+    padding-top: 50pt; /* needs to be padding,not margin for printing */
+    padding-bottom: 5pt;
+    color: rgb(23,54,93);
+    font-weight: normal;
+    font-size: 30pt;
+}
+h2{
+    padding-top: 24pt;
+    margin-bottom: 0px;
+    color: rgb(54,95,145);
+    font-weight: bold;
+    font-size: 16pt;
+}
+h3 {
+    padding-top: 12pt;
+    margin-bottom: 0px;
+    color: rgb(79,129,189);
+    font-weight: bold;
+    font-size: 15pt;
+}
+h4 {
+    padding-top: 5px;
+    color: rgb(79,129,189);
+    font-size: 16pt;
+    font-style: italic;
+    font-weight: bold;
+    display: inline;
+}
+h5 {
+    margin:0px;
+    font-size:14pt;
+    font-family:"Courier New","Courier",monospace;
+    font-weight:bold;
+    color: black;
+}
+h6 {
+    padding-top: 5px;
+    color: rgb(79,129,189);
+    font-size: 14pt;
+    font-style: italic;
+    font-weight: bold;
+    display: inline;
+}
+a {
+    margin:0px;
+    color: rgb(54,95,145);
+    font-weight: bold;
+    text-decoration: none;
+}
+a.howtobutton {
+    width: 70px;
+    height: 70px;
+    display: block;
+    padding: 0px;
+    float: left;
+    border: 2px solid #333333;
+    padding:2px;
+    font-size: 13pt;
+    border-radius:5px;
+    margin:5px;
+    background-color: #990033;
+    text-align:center;
+}
+a.howtobutton:hover {
+    background-color: #ff9933;
+}
+a.howtobutton:active {
+    background-color: #ff9933;
+}
+div.toc {
+    margin: 0px;
+}
+div.ptoc {
+    margin-left:5px;
+}
+div#printtoc {
+    margin: 0px;
+    display:none;
+}
+a.toc1, a.tocf1 {
+    margin-top:15px;
+    color: rgb(23,54,93);
+    font-weight: normal;
+    font-size: 15pt;
+}
+a.toc2, a.tocf2 {
+    color: rgb(54,95,145);
+    font-weight: bold;
+    font-size: 14pt;
+    margin-left:30px;
+}
+a.tocf2 {
+}
+a.toc3, a.tocf3 {
+    color: rgb(79,129,189);
+    font-weight: bold;
+    font-size: 13pt;
+    margin-left:45px;
+}
+a.tocf3 {
+}
+img.ftoc {
+    width:12px;
+    border-style:none;
+}
+a.toplink {
+    padding: 10px;
+    border-radius: 10px;
+    width:50px;
+    margin: 1px;
+    text-align: center;
+    background-color: #333333;
+    color: #ff9933;
+    font-size: 20pt;
+    font-family: monospace;
+    font-weight: bold;
+}
+p {
+    margin-bottom: 12pt;
+    font-size: 13pt;
+    line-height: 18pt;
+}
+p.break {
+    clear: both;
+}
+ol {
+    margin-left:20pt;
+    font-size: 13pt;
+    line-height: 18pt;
+    list-style-position: outside;
+}
+ol.sublist {
+    list-style-type: lower-alpha;
+}
+li {
+    margin-bottom:10pt;
+}
+div.spacer {
+    height:50px;
+}
+@media (max-width: 768px) {
+    body {
+        background-color: white;
+    }
+    div#container {
+        width: auto;
+        padding:10px;
+    }
+    div#titlePage {
+        width:auto;
+        padding:0px;
+    }
+}
+@media (max-width: 718px) {
+    img#logo {
+        width:100%;
+    }
+    div#titlePage {
+        height:auto;
+    }
+}
+@media (max-width: 480px) {
+    div.JC {
+        width: auto;
+        margin-bottom: 12pt;
+        float: none;
+    }     
+    span#author, span#date {
+        font-size:14pt;
+    }
+    div.spacer {
+        height:0px;
+    }
+    .nosmartphone {
+        display:none;
+    }
+    div#buttonBox {
+        padding-top:0px;
+        padding-bottom:0px;
+    }
+}
+@media print {
+    body {
+        background-color: white;
+    }
+    div.JC,div.DIY,div.exercises,div.sectionStart,div.table {
+        page-break-inside: avoid;
+    }
+    .screenonly {
+        display:none;
+    }
+    span.printonly {
+        display:inline;
+    }
+    p,td,ol {
+        font-size:11pt;
+        line-height: 15pt;
+    }
+    h1 {
+        margin-bottom: 13pt;
+        margin-top: 43pt;
+        font-size: 26pt;
+    }
+    h2 {
+        margin-top: 21pt;
+        font-size: 14pt;
+    }
+    h3 {
+        margin-top: 10pt;
+        font-size: 13pt;
+    }
+    h4 {
+        margin-top: 5px;
+        font-size: 11pt;
+    }
+    h5 {
+        font-size: 12pt;
+    }
+    h6 {
+        font-size: 11pt;
+    }
+    a {
+        color: black;
+    }
+    img.jcImage {
+        width: 28px;
+    }
+    img.diyImage {
+        width: 17px;
+    }
+    div.JC {
+        border: 2px solid rgb(31,73,125);
+        box-shadow: none;
+    }
+    div.DIY {
+        border: 1px solid rgb(31,73,125);            
+        box-shadow: none;
+    }
+    div.exercises {
+        border: 1px solid black;            
+        box-shadow: none;
+    }
+    a.toplink {
+        display: none;
+    }
+    div.spacer {
+        height:200px;
+    }
+ /*   div#title {
+        color: darkblue;
+        background-color: white;
+        border-color: darkblue;
+    }*/
+    div#container {
+        padding:40px;
+        width:auto;
+    }
+    .pageBreak {
+        page-break-before: always;
+    }
+    span#title1 {
+        font-size: 50pt;
+        top: 15px;
+    }
+    span#title2 {
+        font-size: 12pt;
+        position: relative;
+        top: 0px;
+    }
+    span#title3 {
+        font-size: 31pt;
+        position: relative;
+        top: -15px;
+    }
+    span#title4 {
+        font-size: 12pt;
+        position: relative;
+        top: -25px;
+    }
+    span#author {
+        font-size: 12pt;
+        font-weight: bold;
+       /* color: rgb(54,95,145);   */
+    }
+    span#date {
+        font-size: 11pt;
+        font-style:italic;
+       /* color: rgb(79,129,189); */
+    }
+    a.toc2, a.toc3 {
+        display:"none";
+    }
+    div#toc {
+        display:none;
+    }
+    div#printtoc {
+        display:block;
+    }
+}
