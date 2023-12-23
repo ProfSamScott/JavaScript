@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Note example from the text
+-->
+<note type='reminder'>
+    <to>Sam</to>
+    <from>Anne</from>
+    <text>Don't forget the groceries.</text>
+</note>

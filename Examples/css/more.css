@@ -1,0 +1,21 @@
+/* 
+    Document   : more
+    Created on : 19-Jun-2012, 3:27:49 PM
+    Author     : Sam Scott
+    Description:
+        AJAX Exercise: More! You should not have to change anything here.
+*/
+
+body {
+    text-align:center;
+}
+div {
+    width:600px;
+    border:1px solid black;
+    margin:auto;
+}
+div#lipsum {
+    width:550px;
+    border-style:none;
+    text-align:left;
+}

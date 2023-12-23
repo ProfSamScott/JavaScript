@@ -1,0 +1,61 @@
+/* 
+    Document   : dropdown
+    Created on : 23-May-2012, 2:29:41 PM
+    Author     : Sam Scott
+    Description:
+        Style for the dropdown menu exercise.
+*/
+
+root { 
+    display: block;
+}
+body {
+    margin:0px;
+}
+div {
+    margin:0px;
+    margin-bottom:5px;
+}
+
+#head {
+    background-color:darkgoldenrod;
+    text-align:center;
+    padding:1%;
+    width:98%;
+}
+
+#footer {
+    text-align:center;
+}
+
+h2.parabutton {
+    cursor: pointer;
+    text-align:center;
+    display:block;
+    width:100%;
+    text-decoration:none;
+    color:blue;
+    background-color:lightblue;
+}
+
+h2.linkbutton {
+    cursor: pointer;
+    text-align:center;
+    display:block;
+    width:100%;
+    text-decoration:none;
+    color:darkblue;
+    background-color:lightcoral;
+}
+
+a.link {
+    display:block;
+    margin:auto;
+    margin-bottom:5px;
+    width:80%;
+    color:darkred;
+    background-color:lightcoral;
+    padding:5px;
+    text-decoration:none;
+    text-align:center;
+}

@@ -1,0 +1,21 @@
+/* 
+    Document   : hw.css
+    Created on : 29-May-2012, 8:16:59 PM
+    Author     : user
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+h1 {
+    border:3px dashed blue;
+    width:200px;
+    font-family:sans-serif;
+}
+
+p {
+    border:2px lightblue solid;
+}

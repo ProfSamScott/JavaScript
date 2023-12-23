@@ -1,0 +1,24 @@
+/* 
+    Document   : slidingTiles
+    Created on : 30-May-2012, 3:53:29 PM
+    Author     : Sam Scott
+    Description:
+        Style sheet for Sliding Tiles starter.
+*/
+
+root { 
+    display: block;
+}
+
+a {
+    width:50px;
+    height:50px;
+    position:absolute;
+    background-color:red;
+    color:white;
+    font-family:sans-serif;
+    font-size:45px;
+    padding:5px;
+    text-align:center;
+    text-decoration:none;
+}

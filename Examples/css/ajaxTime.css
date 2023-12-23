@@ -1,0 +1,25 @@
+/* 
+    Document   : ajaxTime
+    Created on : 19-Jun-2012, 4:28:11 PM
+    Author     : Sam Scott
+    Description:
+        Style sheet for ajaxTime.html
+*/
+
+.frame {
+    vertical-align:top;
+    background-color:tan;
+    border:2px solid blue;
+    padding:10px;
+}
+legend {
+    font-family:sans-serif;
+    font-size:16px;
+}
+#result {
+    font-size:20px;
+}
+body {
+    background-color:tan;
+}
+
